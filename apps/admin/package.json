@@ -1,0 +1,36 @@
+{
+  "name": "@b2c/admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start --port 3001",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@b2c/api-client": "*",
+    "@b2c/mock-data": "*",
+    "@b2c/types": "*",
+    "@b2c/ui": "*",
+    "@base-ui/react": "^1.9.0",
+    "lucide-react": "^1.67.0",
+    "next": "16.4.4",
+    "next-themes": "^0.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "recharts": "^3.10.1",
+    "sonner": "^2.0.8"
+  },
+  "devDependencies": {
+    "@b2c/config": "*",
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

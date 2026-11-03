@@ -1,0 +1,9 @@
+{
+  "name": "@b2c/server",
+  "version": "0.0.0",
+  "private": true,
+  "description": "B2C API server — not implemented yet. Add a framework (Hono, Express, NestJS…) and dev/build scripts here.",
+  "dependencies": {
+    "@b2c/types": "*"
+  }
+}

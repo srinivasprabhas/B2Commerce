@@ -1,0 +1,23 @@
+{
+  "name": "b2c",
+  "private": true,
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "dev:store": "turbo dev --filter=@b2c/storefront",
+    "dev:admin": "turbo dev --filter=@b2c/admin",
+    "dev:server": "turbo dev --filter=@b2c/server",
+    "build": "turbo build",
+    "lint": "turbo lint"
+  },
+  "devDependencies": {
+    "turbo": "^2"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

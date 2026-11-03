@@ -1,0 +1,10 @@
+{
+  "name": "@b2c/mock-data",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Temporary catalog data shared by storefront + admin. Replace with @b2c/api-client calls once apps/server is live.",
+  "type": "module",
+  "exports": { "./*": "./src/*.ts" },
+  "dependencies": { "@b2c/types": "*" },
+  "devDependencies": { "@b2c/config": "*", "typescript": "^5" }
+}

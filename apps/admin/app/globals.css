@@ -1,0 +1,4 @@
+/* Shared theme + shared component classes live in @b2c/ui */
+@import "@b2c/ui/globals.css";
+
+/* Admin-only styles go below */

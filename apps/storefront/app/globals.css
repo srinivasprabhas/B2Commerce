@@ -1,0 +1,83 @@
+/* Shared theme + shared component classes live in @b2c/ui */
+@import "@b2c/ui/globals.css";
+
+/*
+ * Storefront palette — navy (reliability, security, professionalism), 60-30-10 rule:
+ *   60%  neutral  — white / cool off-white backgrounds keep photos and text clear
+ *   30%  navy     — brand surfaces (announcement bar, hero, newsletter, footer) + navy buttons
+ *   10%  amber    — reserved for buying CTAs and sale tags: Add to Cart, Checkout, Place order…
+ * Core colors: white, navy, amber (+ slate neutrals for muted text/borders).
+ * These override the shared theme for the storefront only; the admin keeps its own.
+ */
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-muted: var(--brand-muted);
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
+  --color-cta-foreground: var(--cta-foreground);
+}
+
+:root {
+  /* 60 — neutral */
+  --background: oklch(1 0 0);
+  --card: oklch(1 0 0);
+  --popover: oklch(1 0 0);
+  --secondary: oklch(0.968 0.007 255);
+  --muted: oklch(0.968 0.007 255);
+  --accent: oklch(0.95 0.015 255);
+  --border: oklch(0.91 0.012 255);
+  --input: oklch(0.91 0.012 255);
+
+  /* text: dark navy ink instead of pure black (~15:1 on white) */
+  --foreground: oklch(0.24 0.05 262);
+  --card-foreground: oklch(0.24 0.05 262);
+  --popover-foreground: oklch(0.24 0.05 262);
+  --secondary-foreground: oklch(0.24 0.05 262);
+  --accent-foreground: oklch(0.24 0.05 262);
+  --muted-foreground: oklch(0.5 0.03 257); /* slate, ~5.5:1 on white */
+
+  /* 30 — navy */
+  --primary: oklch(0.32 0.09 260);
+  --primary-foreground: oklch(0.99 0 0);
+  --ring: oklch(0.32 0.09 260 / 45%);
+  --brand: oklch(0.29 0.08 261);
+  --brand-foreground: oklch(0.99 0 0);
+  --brand-muted: oklch(0.82 0.03 258); /* secondary text on navy, ~7:1 */
+
+  /* 10 — amber accent (navy text on amber ≈ 8:1) */
+  --cta: oklch(0.8 0.16 75);
+  --cta-hover: oklch(0.76 0.16 70);
+  --cta-foreground: oklch(0.24 0.05 262);
+}
+
+.dark {
+  --background: oklch(0.17 0.03 262);
+  --card: oklch(0.2 0.035 262);
+  --popover: oklch(0.2 0.035 262);
+  --secondary: oklch(0.24 0.035 262);
+  --muted: oklch(0.24 0.035 262);
+  --accent: oklch(0.27 0.04 262);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+
+  --foreground: oklch(0.97 0.005 255);
+  --card-foreground: oklch(0.97 0.005 255);
+  --popover-foreground: oklch(0.97 0.005 255);
+  --secondary-foreground: oklch(0.97 0.005 255);
+  --accent-foreground: oklch(0.97 0.005 255);
+  --muted-foreground: oklch(0.74 0.02 257);
+
+  --primary: oklch(0.75 0.1 255);
+  --primary-foreground: oklch(0.17 0.03 262);
+  --ring: oklch(0.75 0.1 255 / 45%);
+  --brand: oklch(0.25 0.06 262);
+  --brand-foreground: oklch(0.98 0 0);
+  --brand-muted: oklch(0.78 0.03 258);
+
+  --cta: oklch(0.8 0.16 75);
+  --cta-hover: oklch(0.84 0.15 78);
+  --cta-foreground: oklch(0.2 0.04 262);
+}
+
+/* Storefront-only styles go below */

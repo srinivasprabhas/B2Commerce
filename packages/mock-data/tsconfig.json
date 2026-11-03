@@ -1,0 +1,1 @@
+{ "extends": "@b2c/config/tsconfig.base.json", "include": ["src"] }
