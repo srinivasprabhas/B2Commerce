@@ -2,7 +2,8 @@
 
 import { Sheet, SheetContent, SheetTitle } from "@b2c/ui/components/sheet";
 import { cn } from "@b2c/ui/lib/utils";
-import { ChevronRight, Store } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -59,11 +60,9 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <div className="flex size-full flex-col bg-sidebar text-sidebar-foreground">
       <div className="flex h-(--header-height) items-center px-4">
-        <Link href="/dashboard/ecommerce" onClick={onNavigate} className="flex items-center gap-2 font-semibold">
-          <span className="flex size-7 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <Store className="size-4" />
-          </span>
-          B2Commerce
+        <Link href="/dashboard/ecommerce" onClick={onNavigate} className="flex items-center" aria-label="Tech Commerce admin home">
+          <Image src="/brand/logo.png" alt="Tech Commerce" width={1200} height={335} priority className="h-9 w-auto dark:hidden" />
+          <Image src="/brand/logo-white.png" alt="" aria-hidden width={1200} height={335} priority className="hidden h-9 w-auto dark:block" />
         </Link>
       </div>
       <nav className="flex min-h-0 flex-1 flex-col gap-2 overflow-auto">

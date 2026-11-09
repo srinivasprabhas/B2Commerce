@@ -10,6 +10,7 @@
  * These override the shared theme for the storefront only; the admin keeps its own.
  */
 @theme inline {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
   --color-brand-muted: var(--brand-muted);
@@ -81,3 +82,44 @@
 }
 
 /* Storefront-only styles go below */
+
+/* ---------------- Homepage: hero carousel ---------------- */
+/* A wash in the photo's own backdrop colour behind the copy, so photo + slide read as one frame */
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, var(--sbg) 0%, color-mix(in srgb, var(--sbg) 88%, transparent) 34%, transparent 62%);
+}
+.hero-copy { left: 0; right: 0; bottom: 0; padding: 0 24px 40px; }
+.hero-img { object-position: var(--spos-m, 72% center) !important; }
+.hero-slide.fit-contain .hero-img { object-fit: contain !important; object-position: center 14% !important; transform: none !important; }
+.hero-slide.fit-contain::before { display: none; }
+
+@media (min-width: 960px) {
+  .hero-slide::before {
+    background: linear-gradient(90deg, var(--sbg) 0%, color-mix(in srgb, var(--sbg) 82%, transparent) 26%, transparent 56%);
+  }
+  .hero-slide.fit-contain::before { display: block; }
+  .hero-copy { top: 0; right: auto; width: var(--scw, 46%); padding: 0 3% 0 6%; }
+  .hero-img { object-position: right center !important; }
+  .hero-slide.fit-contain .hero-img { object-position: right center !important; }
+}
+
+@keyframes hero-rise { from { opacity: 0; transform: translateY(22px); } }
+.hero-rise > * { animation: hero-rise 0.9s cubic-bezier(.22, .7, .2, 1) both; }
+.hero-rise > *:nth-child(2) { animation-delay: 0.08s; }
+.hero-rise > *:nth-child(3) { animation-delay: 0.16s; }
+
+@keyframes hero-dot-fill { from { transform: scaleX(0); } }
+.hero-dot-fill { transform-origin: left; animation: hero-dot-fill 6s linear forwards; }
+
+/* ---------------- Homepage: scrolling marquees ---------------- */
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee-track { display: inline-flex; animation: marquee 40s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise > *, .hero-dot-fill, .marquee-track { animation: none !important; }
+}

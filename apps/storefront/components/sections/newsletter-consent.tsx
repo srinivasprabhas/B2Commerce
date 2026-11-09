@@ -22,7 +22,7 @@ export function NewsletterConsent({
         checked={checked}
         onCheckedChange={(value) => onCheckedChange(value === true)}
         disabled={disabled}
-        className="mt-0.5 shrink-0 border-brand-foreground/50 data-checked:border-cta data-checked:bg-cta data-checked:text-cta-foreground"
+        className="mt-0.5 shrink-0"
       />
       <span className="text-sm leading-snug opacity-80">
         I agree to receive marketing emails and accept the privacy policy. You can unsubscribe at any time.

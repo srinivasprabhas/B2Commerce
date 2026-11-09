@@ -35,8 +35,8 @@ Push this folder to GitHub, then create **two** Vercel projects from the same re
 
 | Project            | Root Directory    | Production URL (example)      |
 | ------------------ | ----------------- | ----------------------------- |
-| b2commerce         | `apps/storefront` | b2commerce.vercel.app         |
-| b2commerce-admin   | `apps/admin`      | b2commerce-admin.vercel.app   |
+| techcommerce       | `apps/storefront` | techcommerce.vercel.app       |
+| techcommerce-admin | `apps/admin`      | techcommerce-admin.vercel.app |
 
 For each project: **Add New → Project → import the repo → Root Directory → pick the app**.
 Vercel detects Next.js and the npm workspace automatically — leave the build,

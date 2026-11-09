@@ -13,7 +13,7 @@ function randomDetails() {
   const name = firstNames[Math.floor(Math.random() * firstNames.length)]!;
   const n = Math.floor(100 + Math.random() * 900);
   return {
-    email: `${name}.${n}@b2commerce.test`,
+    email: `${name}.${n}@techcommerce.test`,
     password: Math.random().toString(36).slice(2, 12),
   };
 }

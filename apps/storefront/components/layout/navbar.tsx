@@ -40,12 +40,12 @@ export function Navbar({ links }: { links: NavLink[] }) {
         </SheetContent>
       </Sheet>
 
-      <nav className="hidden items-center gap-6 lg:absolute lg:top-1/2 lg:left-1/2 lg:flex lg:-translate-x-1/2 lg:-translate-y-1/2">
+      <nav className="hidden items-center gap-7 lg:absolute lg:top-1/2 lg:left-1/2 lg:flex lg:-translate-x-1/2 lg:-translate-y-1/2 xl:gap-10">
         {links.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="whitespace-nowrap text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="whitespace-nowrap text-[17px] font-medium text-foreground transition-opacity hover:opacity-60"
           >
             {link.label}
           </Link>

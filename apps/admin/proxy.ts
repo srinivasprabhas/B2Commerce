@@ -17,5 +17,5 @@ export function proxy(_request: NextRequest) {
 
 export const config = {
   // Everything except /login, Next internals and static files
-  matcher: ["/((?!login|_next/static|_next/image|favicon.ico|logo.svg).*)"],
+  matcher: ["/((?!login|_next/static|_next/image|favicon.ico|icon.png|apple-icon.png|brand/|robots.txt).*)"],
 };

@@ -1,6 +1,6 @@
-# B2Commerce — Storefront
+# Tech Commerce — Storefront
 
-Storefront UI for B2Commerce, built with Next.js (App Router), Tailwind CSS v4 and shadcn/ui on Base UI.
+Storefront UI for Tech Commerce, built with Next.js (App Router), Tailwind CSS v4 and shadcn/ui on Base UI.
 
 This is currently a **UI-only** build: products, categories, collections, reviews, blog posts and legal pages come from local mock data, and the cart is stored in the browser.
 

@@ -11,8 +11,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   metadataBase: getSiteUrl(),
-  title: { default: "B2Commerce Admin", template: "%s — B2Commerce Admin" },
-  icons: { icon: "/logo.svg" },
+  title: { default: "Tech Commerce Admin", template: "%s — Tech Commerce Admin" },
   robots: { index: false, follow: false },
 };
 
@@ -20,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
           {children}
           <Toaster richColors position="top-center" />
         </ThemeProvider>

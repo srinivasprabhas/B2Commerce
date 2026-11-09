@@ -21,7 +21,7 @@ import { useSidebar } from "@/components/layout/sidebar-context";
 const notifications = [
   { title: "New order #84231", time: "2 min ago" },
   { title: "Low stock: Fieldtone ANC 700 (Silver)", time: "1 hour ago" },
-  { title: "New review on Lund & Hale Nordic 38", time: "Yesterday" },
+  { title: "New review on Quill 65% Keyboard", time: "Yesterday" },
 ];
 
 export function SiteHeader() {
@@ -38,13 +38,13 @@ export function SiteHeader() {
 
         <DropdownMenu>
           <DropdownMenuTrigger render={<Button variant="ghost" size="sm" className="gap-1" />}>
-            B2Commerce
+            Tech Commerce
             <ChevronsUpDown className="size-3.5 text-muted-foreground" />
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start" className="w-48">
             <DropdownMenuGroup>
               <DropdownMenuLabel>Stores</DropdownMenuLabel>
-              <DropdownMenuItem>B2Commerce</DropdownMenuItem>
+              <DropdownMenuItem>Tech Commerce</DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -103,7 +103,7 @@ export function SiteHeader() {
               <DropdownMenuGroup>
                 <DropdownMenuLabel>
                   <div className="font-medium text-foreground">Admin</div>
-                  <div className="text-xs font-normal">admin@b2commerce.example</div>
+                  <div className="text-xs font-normal">admin@techcommerce.example</div>
                 </DropdownMenuLabel>
               </DropdownMenuGroup>
               <DropdownMenuSeparator />
